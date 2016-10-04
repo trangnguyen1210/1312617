@@ -1,6 +1,6 @@
 # Homework 1 - *Name of App*
 
-**Name of your app** Đây là trang web cho phép người dùng viết blog. Thời gian nộp: 0h ngày 3/10
+**Name of your app** Trang web cho phép người dùng chia sẻ và cập nhật trạng thái. Due Date: 24:00 11/10/2016
 
 Danh sách sinh viên: **Your Name Here**
 
@@ -10,44 +10,45 @@ URL: **Insert your Heroku URL here**
 
 Danh sách chức năng **bắt buộc**:
 
-* [ ] Người dùng có thể tạo bài blog mới.
-* [ ] Người dùng có thể cập nhật lại nội dung bài blog.
+* [ ] Người dùng được phép đăng nhập bằng tên tài khoản, mật khẩu.
+* [ ] Người dùng có thể đăng trạng thái lên trang cá nhân.
+* [ ] Ở trang home, người dùng có thể xem trạng thái của bạn bè và những người đang được người đó follow. Cần thể hiện đầy đủ thông tin của trạng thái như hình ảnh, avatar,...
+* [ ] Người dùng có thể tìm kiếm người dùng khác
+* [ ] Người dùng có thể follow người dùng khác
 * [ ] Người dùng có thể thêm comment vào các bài đăng.
-* [ ] Sử dụng bootstrap để tạo layout cho trang web. Sử dụng [Bootstrap](https://rubygems.org/gems/bootstrap/versions/4.0.0.alpha3).
-* [ ] Bài đăng sẽ được format bằng markdown. Sử dụng [RedCarpet gem](https://github.com/vmg/redcarpet).
+* [ ] Người dùng có thể đăng nhập bằng Twitter qua OAuth(Sử dụng Omniauth Twitter)
+* [ ] Sử dụng Twitter API để cho phép tạo tweet lên Twitter của người dùng khi đăng trạng thái thành công (Sử dụng [Twitter Gem](https://github.com/sferik/twitter) và [đăng ký Application Token](https://apps.twitter.com))
+* [ ] Cần thể hiện số ký tự còn lại khi gõ (Twitter cho phép gõ trạng thái tối đa 140 ký tự)
+* [ ] Cần thực hiện AJAX và javascript để hạn chế nạp lại trang.
+* [ ] Cho phép tải danh sách các tweet vào trang chủ của người dùng
+* [ ] Cần quản lý API Key bằng biến môi trường (Sử dụng [dotenv gem](https://github.com/bkeepers/dotenv))
 
 Danh sách chức năng **phụ**:
 
-* [ ] Người dùng có thể xóa các bài đã đăng và có hiện câu hỏi yêu cầu xác nhận lại trước khi xóa.
-* [ ] Người dùng có thể tìm kiếm các bài đăng có tiêu đề chứa từ khóa người dùng đã nhập.
-* [ ] Người dùng được phép đăng nhập, đăng xuất
-* [ ] Bảo mật mật khẩu tài khoản người dùng khi đăng ký. Sủ dụng [Bcrypt](https://github.com/codahale/bcrypt-ruby).
-* [ ] Mỗi bài đăng có chứa nhiều tag. Và người dùng có thể tìm kiếm theo tag.
-* [ ] Có thể xem bao nhiêu lượt xe ở mỗi bài đăng.
+* [ ] Tự động load thêm các tweet mới khi kéo xuống cuối trang.
+* [ ] Người dùng được phép khởi tạo mật khẩu. Khi nhấn vào nút khởi tạo mật khẩu thì hệ thống sẽ gửi mail cho người dùng link xác nhận, nhấn vào link sẽ đến trang nhập mật khẩu mới.
+* [ ] Cho phép retweet, favorite các tweet ngay từ trang chủ
+* [ ] Cho phép follow/unfollow người dùng từ twitter
+* [ ] Cho phép tìm kiếm người dùng twitter
+* [ ] Người dùng được phép thấy tweet sau khi đã thêm thành công mà không cần tải lại trang
+* [ ] Retweet và favorite sẽ làm tăng số lượng người dùng retweet và favorite của mỗi tweet mà không cần tải lại trang
+* [ ] Cần test các model validation với rspec
+* [ ] Cần tạo các test với capybara và rspec để test chức năng của ứng dụng
 
 Danh sách chức năng **thêm** đã làm nhưng chưa được liệt kê ở trên:
 
-* [ ] Người dùng có thể đăng nhập với Facebook.
-* [ ] Người dùng có thể block người khác. Sau khi block, người dùng sẽ không nhận được tin nhắn từ người bị block gửi nữa.
-* [ ] Người dùng có thể xóa người dùng khác ra khỏi danh sách bạn.
-* [ ] Người dùng có thể unblock người dùng khác.
-* [ ] Khi người dùng kéo xuống cuối trang, các tin nhắn tiếp theo sẽ tự động hiển thị hoặc có nút nhấn "Xem thêm tin nhắn" để nạp thêm danh sách tin nhắn.
-* [ ] Người dùng sẽ nhận được email thông báo khi họ nhận được tin nhắn cùng với link để xem tin nhắn.
-* [ ] Người dùng sẽ nhận được email khi người nhận đã đọc tin nhắn.
-* [ ] Người dùng có thể gửi tin nhắn cho người dùng ngoài hệ thống. Khi đó, người nhận sẽ nhận được 1 email chứa link đăng ký tài khoản. Sau khi đăng ký tài khoản, họ có thể xem tin nhắn đã nhận.
 
-Danh sách chức năng **phụ** đã làm nhưng không được liệt kê ở trên:
+Quy trình sử dụng [GIT Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/)
+* [ ] Git với Centralize Workflow (chỉ có duy nhất nhánh master)
+* [ ] Git theo Feature Branch Workflow (mỗi chức năng sẽ được làm trên 1 nhánh riêng)
+* [ ] Git theo Gitflow Workflow (Có các nhánh develop, master, test,...)
+* [ ] Có sử dụng tag, pull requests
 
-Các chuẩn đầu ra cần thực hiện:
-* [ ] Git với Centralize Workflow
-* [ ] Git theo Feature Branch Workflow
-* [ ] Git theo Feature Branch Workflow có Pull Request
-* [ ] Git theo Gitflow Workflow
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-![Video Walkthrough](relative-path-to-your-gif-file-on-github-or-absolute-path-to-file-on-imgur-or-youtube)
+![Video Walkthrough](relative-path-to-your-gif-file-on-github)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
